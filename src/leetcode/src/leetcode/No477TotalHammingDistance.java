@@ -9,22 +9,14 @@ public class No477TotalHammingDistance {
 	}
 
 	public static int totalHammingDistance(int[] nums) {
-        if (nums == null || nums.length <= 1) {
-            throw new RuntimeException("invalid input");
-        }
-        int totalDist = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                int hamming = nums[i] ^ nums[j];
-                int dist = 0;
-                for (int pow = 1; pow <= 1e9; pow = pow << 1) {
-                    if ((hamming & pow) != 0) {
-                        dist++;
-                    }
-                }
-                totalDist += dist;
+        int total = 0, n = nums.length;
+        for (int j = 0; j < 32; j++) {
+            int bitCount = 0;
+            for (int i = 0; i < n; i++) {
+                bitCount += (nums[i] >> j) & 1;
             }
+            total += bitCount * (n - bitCount);
         }
-        return totalDist;
+        return total;
     }
 }
