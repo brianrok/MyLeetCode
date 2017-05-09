@@ -1,5 +1,7 @@
 package leetcode.common;
 
+import leetcode.src.leetcode.common.PrintUtils;
+
 public class QuickSort {
 
     public static void main(String[] args) {

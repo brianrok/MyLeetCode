@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import leetcode.common.PrintUtils;
+import leetcode.src.leetcode.common.PrintUtils;
 
 public class CombinationSum {
 

@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.common.PrintUtils;
+import leetcode.src.leetcode.common.PrintUtils;
 
 public class SearchForARange {
     private static final int[] NOT_FOUND = new int[] {-1, -1};

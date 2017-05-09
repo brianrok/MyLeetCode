@@ -1,4 +1,4 @@
-package leetcode.common;
+package leetcode.src.leetcode.common;
 
 import java.util.Arrays;
 import java.util.List;
